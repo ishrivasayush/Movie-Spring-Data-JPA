@@ -1,22 +1,31 @@
 package com.SpringDataJPA.SpringDataJPA.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
-//JPA Dependancies is responsible for @Entity anotation
+//JPA Dependency is responsible for @Entity annotation
 @Entity
+@Table(name = "Films") //ByDefault Name is Movie Change table name.
 public class Movie {
 
 
     @Id //For PrimaryKey
+    //Increemented by 1
+    //id is being Control by hibernate
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    //id is being control by Mysql
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String movieName;
+
+    @Column(name="mName") //Name of column is change.
+    private String movieName;  //movie_name Hibernate Naming Convention.
     private String movieTitle;
     private long movieDate;
     private int movieRatings;
