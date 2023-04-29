@@ -14,4 +14,8 @@ public class MovieDto {
     private String movieName;
     private String movieTitle;
     private long movieDate;
+    private int movieRatings;
+
+
+
 }

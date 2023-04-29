@@ -37,5 +37,14 @@ public class Movie {
         this.movieDate = movieDate;
         this.movieRatings = movieRatings;
     }
- }
+
+    public Movie(String movieName, String movieTitle, long movieDate, int movieRatings) {
+        this.movieName = movieName;
+        this.movieTitle = movieTitle;
+        this.movieDate = movieDate;
+        this.movieRatings = movieRatings;
+    }
+
+
+}
 
